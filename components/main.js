@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const Main = () => {
   return (
-    <div className="w-full h-screen text-center">
-      <div className=" max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center ">
+    <div id="home" className="w-full h-screen text-center">
+      <div className=" max-w-[1240px] w-full h-full mx-auto px-2 pt-36 pb-2 lg:pt-20 flex justify-center items-center ">
         <div>
-          <p className=" uppercase text-sm tracking-widest pt-16 text-gray-600 ">
+          <p className=" uppercase text-sm tracking-widest text-gray-600 ">
             LET&apos;S BUILD SOMETHING AMAZING TOGETHER
           </p>
           <h1 className="py-4 text-gray-700">
