@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-screen p-2">
       <div className="max-w-[1240px] m-auto px-2 py-16 lg:px-0 w-full">
-        <p className="text-xl uppercase tracking-widest text-[#5651e5]">
+        <p className="text-xl uppercase tracking-widest text-[#a3320b]">
           Contact
         </p>
         <h2 className="py-4">Get In Touch</h2>
@@ -19,7 +19,7 @@ const Contact = () => {
               <div>
                 <Image
                   className="rounded-xl hover:scale-105 ease-in duration-300 w-full"
-                  src="/../public/assets/others/contact.jpg"
+                  src="/assets/others/contact.jpg"
                   width="600"
                   height="400"
                   alt=""
@@ -113,7 +113,7 @@ const Contact = () => {
         <div className="flex justify-center py-12">
           <Link href="/">
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <HiOutlineChevronDoubleUp className=" text-[#5651e5]" size={30} />
+              <HiOutlineChevronDoubleUp className=" text-[#a3320b]" size={30} />
             </div>
           </Link>
         </div>

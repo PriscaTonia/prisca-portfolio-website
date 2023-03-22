@@ -5,7 +5,7 @@ const About = () => {
     <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
       <div className="max-w-[1240px] p-2 lg:p-0 m-auto md:grid grid-cols-3 gap-16 ">
         <div className="col-span-2">
-          <p className="text-xl uppercase tracking-widest text-[#5651e5]">
+          <p className="text-xl uppercase tracking-widest text-[#a3320b]">
             About
           </p>
           <h2 className="py-4">Get To Know Me Better</h2>
@@ -44,7 +44,7 @@ const About = () => {
         <div className="col-span-1 w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center px-4 pt-16 pb-4 hover:scale-105 ease-in duration-300 ">
           <Image
             className="rounded-xl w-full"
-            src="/../public/assets/others/about.jpg"
+            src="/assets/others/about.jpg"
             alt=""
             width="400"
             height="300"
