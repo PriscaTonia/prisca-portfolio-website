@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
@@ -7,6 +8,25 @@ import { FaLinkedinIn, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState("#ecf0f3");
+  const [linkColor, setLinkColor] = useState("#1f2937");
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (
+      router.asPath === "/sinachpat" ||
+      router.asPath === "/esther" ||
+      router.asPath === "/ubulu" ||
+      router.asPath === "/virens"
+    ) {
+      setNavBg("transparent");
+      setLinkColor("#ecf0f3");
+    } else {
+      setNavBg("#ecf0f3");
+      setLinkColor("#1f2937");
+    }
+  }, [router]);
 
   const handleNav = () => {
     setNav(!nav);
@@ -25,6 +45,7 @@ const Navbar = () => {
 
   return (
     <div
+      style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
           ? " fixed w-full h-20 shadow-xl z-[100]  px-4"
@@ -34,16 +55,11 @@ const Navbar = () => {
       {/* Desktop Navbar Design */}
       <div className="flex justify-between items-center w-full h-full max-w-[1400px] m-auto px-2 2xl:px-16">
         <Link href="/">
-          <Image
-            src="/../public/assets/logo/logo3.png"
-            width="200"
-            height="20"
-            alt=""
-          />
+          <Image src="/assets/logo/logo3.png" width="200" height="20" alt="" />
         </Link>
 
         <div>
-          <ul className="hidden md:flex">
+          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
@@ -89,7 +105,7 @@ const Navbar = () => {
             <div className="flex w-full items-center justify-between">
               <Link href="/">
                 <Image
-                  src="/../public/assets/logo/logo3.png"
+                  src="/assets/logo/logo3.png"
                   width="120"
                   height="35"
                   alt=""
@@ -110,19 +126,44 @@ const Navbar = () => {
             <div className="py-4 flex flex-col">
               <ul className="uppercase">
                 <Link href="/">
-                  <li className="py-4 text-sm hover:border-b">Home</li>
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm hover:border-b"
+                  >
+                    Home
+                  </li>
                 </Link>
                 <Link href="/#about">
-                  <li className="py-4 text-sm hover:border-b">About</li>
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm hover:border-b"
+                  >
+                    About
+                  </li>
                 </Link>
                 <Link href="/#skills">
-                  <li className="py-4 text-sm hover:border-b">Skills</li>
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm hover:border-b"
+                  >
+                    Skills
+                  </li>
                 </Link>
                 <Link href="/#projects">
-                  <li className="py-4 text-sm hover:border-b">Projects</li>
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm hover:border-b"
+                  >
+                    Projects
+                  </li>
                 </Link>
                 <Link href="/#contact">
-                  <li className="py-4 text-sm hover:border-b">Contact</li>
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm hover:border-b"
+                  >
+                    Contact
+                  </li>
                 </Link>
               </ul>
               <div className="pt-40">

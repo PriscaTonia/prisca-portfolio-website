@@ -1,40 +1,35 @@
-import sinachImg from "../public/assets/projects/sinachpat.PNG";
-import ubuluImg from "../public/assets/projects/ubulu.PNG";
-import estherImg from "../public/assets/projects/estherAF.PNG";
-import virenImg from "../public/assets/projects/virens.PNG";
-// import Image from "next/image";
 import ProjectItem from "./projectItem";
 
 const Projects = () => {
   return (
     <div id="projects" className="w-full p-2">
       <div className="max-w-[1240px] mx-auto px-2 py-16 lg:p-0 ">
-        <p className="text-xl uppercase tracking-widest text-[#5651e5]">
+        <p className="text-xl uppercase tracking-widest text-[#a3320b]">
           projects
         </p>
         <h2 className="py-4">Projects I have Worked On</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
             title="Sinachpat | Portfolio"
-            bgImg={sinachImg}
+            bgImg="/assets/projects/sinachpat.PNG"
             framework="React Js"
             projectUrl="/sinachpat"
           />
           <ProjectItem
             title="Ubulu Africa"
-            bgImg={ubuluImg}
+            bgImg="/assets/projects/ubulu.PNG"
             framework="React Js"
             projectUrl="/ubulu"
           />
           <ProjectItem
             title="Esther African Foods"
-            bgImg={estherImg}
+            bgImg="/assets/projects/estherAF.PNG"
             framework="WordPress CRM"
             projectUrl="/esther"
           />
           <ProjectItem
             title="Virens Power"
-            bgImg={virenImg}
+            bgImg="/assets/projects/virens.PNG"
             framework="WordPress CRM"
             projectUrl="/virens"
           />

@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <div id="skills" className="w-full lg:h-screen p-2">
       <div className="max-w-[1240px] p-2 lg:p-0 mx-auto flex flex-col justify-center h-full">
-        <p className="text-xl uppercase tracking-widest text-[#5651e5]">
+        <p className="text-xl uppercase tracking-widest text-[#a3320b]">
           Skills
         </p>
         <h2 className="py-4">Technologies I Know And Use</h2>
@@ -13,7 +13,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/html.png"
+                  src="/assets/skills/html.png"
                   alt=""
                   width="64"
                   height="64"
@@ -29,7 +29,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/css.png"
+                  src="/assets/skills/css.png"
                   alt=""
                   width="64"
                   height="64"
@@ -45,7 +45,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/javascript.png"
+                  src="/assets/skills/javascript.png"
                   alt=""
                   width="64"
                   height="64"
@@ -61,7 +61,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/react.png"
+                  src="/assets/skills/react.png"
                   alt=""
                   width="64"
                   height="64"
@@ -77,7 +77,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/github1.png"
+                  src="/assets/skills/github1.png"
                   alt=""
                   width="64"
                   height="64"
