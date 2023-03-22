@@ -22,27 +22,27 @@ const Main = () => {
             your ideas to life!
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-            <div className=" rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href="/">
+            <a href="https://www.linkedin.com/in/prisca-ebube-6805971a1/">
+              <div className=" rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaLinkedinIn />
-              </Link>
-            </div>
-            <div className=" rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href="/">
+              </div>
+            </a>
+            <a href="https://twitter.com/EbubePrisca">
+              <div className=" rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaTwitter />
-              </Link>
-            </div>
-            <div className=" rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href="/">
+              </div>
+            </a>
+            <a href="mailto:priscaebueb@gmail.com">
+              <div className=" rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <AiOutlineMail />
-              </Link>
-            </div>
-            <div className=" rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href="/">
+              </div>
+            </a>
+            <a href="https://github.com/PriscaTonia">
+              <div className=" rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 {" "}
                 <FaGithub />
-              </Link>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
