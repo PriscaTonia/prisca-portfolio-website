@@ -1,38 +1,64 @@
 import ProjectItem from "./projectItem";
 
 const Projects = () => {
+  const projectList = [
+    {
+      title: "Sinachpat | Portfolio",
+      bgImg: "/assets/projects/sinachpat.PNG",
+      framework: "React Js",
+      url: "/sinachpat",
+    },
+    {
+      title: "Ubulu Africa",
+      bgImg: "/assets/projects/ubulu.PNG",
+      framework: "React Js",
+      url: "/ubulu",
+    },
+    {
+      title: "Esther African Foods",
+      bgImg: "/assets/projects/estherAF.PNG",
+      framework: "WordPress CRM",
+      url: "/esther",
+    },
+    {
+      title: "Virens Power",
+      bgImg: "/assets/projects/virens.PNG",
+      framework: "WordPress CRM",
+      url: "/virens",
+    },
+    {
+      title: "Multi-Step Form",
+      bgImg: "/assets/projects/multi-step-form.PNG",
+      framework: "React Js",
+      url: "/multiForm",
+    },
+    {
+      title: "Space Tourism Website",
+      bgImg: "/assets/projects/space-tourism.PNG",
+      framework: "React Js",
+      url: "/spaceTourism",
+    },
+  ];
+
   return (
     <div id="projects" className="w-full p-2">
-      <div className="max-w-[1240px] mx-auto px-2 py-16 lg:p-0 ">
+      <div className="max-w-[1240px] mx-auto px-2 pt-10 pb-16 lg:p-0 ">
         <p className="text-xl uppercase tracking-widest text-[#a3320b]">
           projects
         </p>
-        <h2 className="py-4">Projects I have Worked On</h2>
+        <h2 className="py-4">Major Projects I have Worked On</h2>
         <div className="grid md:grid-cols-2 gap-8">
-          <ProjectItem
-            title="Sinachpat | Portfolio"
-            bgImg="/assets/projects/sinachpat.PNG"
-            framework="React Js"
-            projectUrl="/sinachpat"
-          />
-          <ProjectItem
-            title="Ubulu Africa"
-            bgImg="/assets/projects/ubulu.PNG"
-            framework="React Js"
-            projectUrl="/ubulu"
-          />
-          <ProjectItem
-            title="Esther African Foods"
-            bgImg="/assets/projects/estherAF.PNG"
-            framework="WordPress CRM"
-            projectUrl="/esther"
-          />
-          <ProjectItem
-            title="Virens Power"
-            bgImg="/assets/projects/virens.PNG"
-            framework="WordPress CRM"
-            projectUrl="/virens"
-          />
+          {projectList.map((item) => {
+            return (
+              <ProjectItem
+                key={item.title}
+                title={item.title}
+                bgImg={item.bgImg}
+                framework={item.framework}
+                projectUrl={item.url}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
