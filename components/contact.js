@@ -3,8 +3,52 @@ import Link from "next/link";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import React, { useRef, useEffect, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useForm, SubmitHandler } from "react-hook-form";
 
 const Contact = () => {
+  const form = useRef();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState,
+    formState: { isSubmitSuccessful },
+  } = useForm();
+
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const onSubmit = (formData) => {
+    emailjs
+      .sendForm(
+        "service_f79hnsr",
+        "contact_form",
+        form.current,
+        "oF8fl2Q343tNoE5ek"
+      )
+      .then(
+        (result) => {
+          setSuccessMessage(
+            `${formData.from_name}, your message was sent successfully. You'll get a response within 24hrs`
+          );
+        },
+        (error) => {
+          setErrorMessage(error.text);
+        }
+      );
+  };
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset();
+      setTimeout(() => {
+        setSuccessMessage("");
+        setErrorMessage("");
+      }, 5000);
+    }
+  }, [formState, reset]);
+
   return (
     <div id="contact" className="w-full lg:h-screen p-2">
       <div className="max-w-[1240px] m-auto px-2 py-16 lg:px-0 w-full">
@@ -63,12 +107,22 @@ const Contact = () => {
           {/* Right */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form>
+              {successMessage && (
+                <div className="bg-green-400 p-4 rounded-lg">
+                  {successMessage}
+                </div>
+              )}
+              {errorMessage && (
+                <div className="bg-red-700 p-4 rounded-lg">{errorMessage}</div>
+              )}
+              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
                     <input
+                      {...register("from_name")}
                       type="text"
+                      name="from_name"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                     />
                   </div>
@@ -77,7 +131,9 @@ const Contact = () => {
                       Phone Number
                     </label>
                     <input
+                      {...register("number")}
                       type="text"
+                      name="number"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                     />
                   </div>
@@ -85,20 +141,26 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Email</label>
                   <input
+                    {...register("email")}
                     type="email"
+                    name="email"
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                   />
                 </div>
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Subject</label>
                   <input
+                    {...register("subject")}
                     type="text"
+                    name="subject"
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                   />
                 </div>
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Message</label>
                   <textarea
+                    {...register("message")}
+                    name="message"
                     className="border-2 rounded-lg p-3 border-gray-300"
                     rows="10"
                   ></textarea>
