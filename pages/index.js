@@ -1,6 +1,7 @@
 import About from "@/components/about";
 import Contact from "@/components/contact";
 import Main from "@/components/main";
+import Navbar from "@/components/navbar";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import Head from "next/head";
@@ -15,6 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
       <Main />
       <About />
       <Skills />

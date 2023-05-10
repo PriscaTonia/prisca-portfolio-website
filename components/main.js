@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Main = () => {
   return (
-    <div id="home" className="w-full h-screen text-center">
-      <div className=" max-w-[1240px] w-full h-full mx-auto px-2 pt-36 pb-2 lg:pt-20 flex justify-center items-center ">
+    <div id="home" className="w-full h-screen text-center  pt-36">
+      <div className=" max-w-[1240px] w-full h-full mx-auto px-4  pb-2 lg:pt-20 flex justify-center items-center ">
         <div>
           <p className=" uppercase text-sm tracking-widest text-gray-600 ">
             LET&apos;S BUILD SOMETHING AMAZING TOGETHER
@@ -14,7 +14,7 @@ const Main = () => {
             Hi, I&apos;m <span className="text-[#a3320b]"> Prisca </span>
           </h1>
           <h1 className="py-2 text-gray-700">A Front-End Web Developer</h1>
-          <p className="py-4 text-gray-600 max-w-[70%] m-auto">
+          <p className="py-4 text-gray-600 max-w-[85%] m-auto">
             A frontend developer who loves to create beautiful and amazing UI
             designs while writing clean and efficient code. I believe that great
             design and user experience can make all the difference 😊. Take a

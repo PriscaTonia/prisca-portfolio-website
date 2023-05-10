@@ -41,7 +41,7 @@ const Projects = () => {
   ];
 
   return (
-    <div id="projects" className="w-full p-2 pt-16 pb-8">
+    <div id="projects" className="w-full p-4 pt-16 pb-8">
       <div className="max-w-[1240px] mx-auto px-2 lg:p-0 ">
         <p className="text-xl uppercase tracking-widest text-[#a3320b]">
           projects

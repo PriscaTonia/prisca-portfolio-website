@@ -53,7 +53,7 @@ const Navbar = () => {
       }
     >
       {/* Desktop Navbar Design */}
-      <div className="flex justify-between items-center w-full h-full max-w-[1400px] m-auto px-2 2xl:px-16">
+      <div className="flex justify-between items-center w-full h-full max-w-[1400px] m-auto px-2 2xl:px-16 ">
         <Link href="/">
           <Image src="/assets/logo/logo3.png" width="200" height="20" alt="" />
         </Link>
