@@ -5,7 +5,7 @@ import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import React, { useRef, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
   const form = useRef();
@@ -20,6 +20,7 @@ const Contact = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Submitting contact form and sending the details using EmailJs
   const onSubmit = (formData) => {
     emailjs
       .sendForm(
@@ -39,6 +40,8 @@ const Contact = () => {
         }
       );
   };
+
+  // If form submit is successful, clear form and success/error message
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
       reset();
@@ -119,6 +122,7 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
+                    {/* Register name and name attributs has to match for EmailJs to work correctly - from_name */}
                     <input
                       {...register("from_name")}
                       type="text"
