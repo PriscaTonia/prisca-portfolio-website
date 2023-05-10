@@ -53,8 +53,8 @@ const Contact = () => {
   }, [formState, reset]);
 
   return (
-    <div id="contact" className="w-full lg:h-screen p-2">
-      <div className="max-w-[1240px] m-auto px-2 py-16 lg:px-0 w-full">
+    <div id="contact" className="w-full lg:h-screen p-2 py-16">
+      <div className="max-w-[1240px] m-auto px-2 lg:px-0 w-full">
         <p className="text-xl uppercase tracking-widest text-[#a3320b]">
           Contact
         </p>
